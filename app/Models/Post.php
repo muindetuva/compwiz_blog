@@ -11,4 +11,10 @@ class Post extends Model
     use HasFactory, FilterByUser;
 
     protected $fillable = ['title', 'caption', 'image', 'content'];
+
+
+    function user()
+    {
+        return $this->belongsTo(User::class,)->select(['id', 'name']);
+    }
 }
