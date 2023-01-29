@@ -6,9 +6,15 @@
     <title>Compwiz Blog</title>
     @vite('resources/css/app.css')
 </head>
-<body class="antialiased">
-<nav class="border-bottom">
-    <h1>Compwiz Blog</h1>
+<body class="antialiased px-2">
+<nav class="border-bottom py-3 flex place-items-center">
+    <a href="/" class=" text-2xl font-bold">
+        <span class="text-yellow-500">Compwiz</span>
+        <span class="text-green-500">Blog</span>
+    </a>
+
+    <a class="ml-auto font-medium text-sm" href="#">Log In</a>
+    <a class="ml-2 text-white font-medium bg-yellow-500 rounded p-1 text-sm" href="#">Register</a>
 </nav>
 {{ $slot }}
 </body>
