@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +20,26 @@ Route::get('/', function () {
 
 Route::get('/posts', function () {
     return view('posts.index');
+});
+
+Route::get('/register', function () {
+
+    return view('users.create');
+});
+
+Route::post('/register', function () {
+    // Validate the data
+    $attributes = Request::validate([
+        'name' => ['required'],
+        'email' => ['required', 'email', 'unique:users'],
+        'password' => ['required'],
+    ]);
+
+    // Create the user
+    $user = User::create($attributes);
+
+    // Log in the user
+    auth()->login($user);
+
+    return redirect('/posts');
 });
