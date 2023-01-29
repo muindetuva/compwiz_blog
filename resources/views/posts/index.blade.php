@@ -7,9 +7,10 @@
     </div>
 
     <div class="flex flex-col">
-        <x-post></x-post>
-        <x-post></x-post>
-        <x-post></x-post>
-        <x-post></x-post>
+        @foreach($posts as $post)
+            <x-post
+                :post="$post"
+            ></x-post>
+        @endforeach
     </div>
 </x-layout>

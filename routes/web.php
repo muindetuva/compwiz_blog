@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,10 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', function () {
-    return view('posts.index');
+
+    return view('posts.index', [
+        'posts' => Post::withoutGlobalScope('user')->get()
+    ]);
 });
 
 Route::get('/register', function () {
@@ -41,5 +45,5 @@ Route::post('/register', function () {
     // Log in the user
     auth()->login($user);
 
-    return redirect('/posts');
+    return redirect('/admin');
 });
