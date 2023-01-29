@@ -1,7 +1,9 @@
 <x-layout>
     <img src="{{asset('storage/'. $post->image)}}" alt="Post Image">
     <h1 class="font-bold mt-3 text-xl">{{$post->title}}</h1>
-    <p class="text-sm font-extralight">Alfred Tuva &#x2022; 1 Feb 2023</p>
+    <p class="text-sm font-extralight">
+        {{$post->user->name}} &#x2022; {{date('d M Y', strtotime($post->created_at))}}
+    </p>
 
     <div class="mt-3">
         {!! $post->content !!}

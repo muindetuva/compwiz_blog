@@ -18,20 +18,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     return view('welcome', [
-        'posts' => Post::withoutGlobalScope('user')->take(3)->get()
+        'posts' => Post::withoutGlobalScope('user')->with('user')->take(3)->get()
     ]);
 });
 
 Route::get('/posts', function () {
 
     return view('posts.index', [
-        'posts' => Post::withoutGlobalScope('user')->get()
+        'posts' => Post::withoutGlobalScope('user')->with('user')->get()
     ]);
 });
 
 Route::get('/posts/{post}', function ($post) {
     return view('posts.show', [
-        'post' => Post::withoutGlobalScope('user')->find($post)
+        'post' => Post::withoutGlobalScope('user')->with('user')->find($post)
     ]);
 });
 

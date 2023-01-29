@@ -2,7 +2,10 @@
    class="w-64 mx-auto  hover:shadow-md transition duration-300 ease-in-out my-2 border">
     <img src="{{ asset('storage/'. $post->image)  }}" alt="Blog image">
     <div class="p-2">
-        <p class="mt-1 text-xs font-medium">Alfred Tuva &#x2022; 1 Feb 2023 </p>
+
+        <p class="mt-1 text-xs font-medium">
+            {{$post->user->name}} &#x2022; {{date('d M Y', strtotime($post->created_at))}}
+        </p>
         <div class="flex justify-between items-center">
             <p class="mt-1 font-bold">{{ $post->title }}</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
