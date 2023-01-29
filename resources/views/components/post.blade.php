@@ -1,4 +1,5 @@
-<a class="w-64 mx-auto  hover:shadow-md transition duration-300 ease-in-out my-2 border">
+<a href="{{'/posts/' . $post->id }}"
+   class="w-64 mx-auto  hover:shadow-md transition duration-300 ease-in-out my-2 border">
     <img src="{{ asset('storage/'. $post->image)  }}" alt="Blog image">
     <div class="p-2">
         <p class="mt-1 text-xs font-medium">Alfred Tuva &#x2022; 1 Feb 2023 </p>
