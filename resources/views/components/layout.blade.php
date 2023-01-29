@@ -13,8 +13,8 @@
         <span class="text-green-500">Blog</span>
     </a>
 
-    <a class="ml-auto font-medium text-sm" href="#">Log In</a>
-    <a class="ml-2 text-white font-medium bg-yellow-500 rounded p-1 text-sm" href="#">Register</a>
+    <a class="ml-auto font-medium text-sm" href="/admin">Log In</a>
+    <a class="ml-2 text-white font-medium bg-yellow-500 rounded p-1 text-sm" href="/register">Register</a>
 </nav>
 {{ $slot }}
 </body>
