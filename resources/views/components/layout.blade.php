@@ -12,9 +12,14 @@
         <span class="text-yellow-500">Compwiz</span>
         <span class="text-green-500">Blog</span>
     </a>
+    @auth
+        <a class="ml-auto text-white font-medium bg-yellow-500 rounded p-1 text-sm" href="/admin">Dashboard</a>
+    @endauth
 
-    <a class="ml-auto font-medium text-sm" href="/admin">Log In</a>
-    <a class="ml-2 text-white font-medium bg-yellow-500 rounded p-1 text-sm" href="/register">Register</a>
+    @guest
+        <a class="ml-auto font-medium text-sm" href="/admin/login">Log In</a>
+        <a class="ml-2 text-white font-medium bg-yellow-500 rounded p-1 text-sm" href="/register">Register</a>
+    @endguest
 </nav>
 {{ $slot }}
 </body>
