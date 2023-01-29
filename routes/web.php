@@ -29,6 +29,12 @@ Route::get('/posts', function () {
     ]);
 });
 
+Route::get('/posts/{post}', function ($post) {
+    return view('posts.show', [
+        'post' => Post::withoutGlobalScope('user')->find($post)
+    ]);
+});
+
 Route::get('/register', function () {
 
     return view('users.create');
