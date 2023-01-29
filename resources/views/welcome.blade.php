@@ -15,8 +15,9 @@
         <h3 class="text-center font-medium mb-3">Latest Posts</h3>
 
         <div class="flex flex-col">
-            <x-post></x-post>
-            <x-post></x-post>
+            @foreach($posts as $post)
+                <x-post :post="$post"></x-post>
+            @endforeach
         </div>
 
 

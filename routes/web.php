@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    return view('welcome', [
+        'posts' => Post::withoutGlobalScope('user')->take(3)->get()
+    ]);
 });
 
 Route::get('/posts', function () {
