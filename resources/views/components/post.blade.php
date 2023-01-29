@@ -1,5 +1,5 @@
 <a class="w-64 mx-auto  hover:shadow-md transition duration-300 ease-in-out my-2 border">
-    <img src="{{ asset('images/is_php_dead.jpg')  }}" alt="Blog image">
+    <img src="{{ asset('storage/'. $post->image)  }}" alt="Blog image">
     <div class="p-2">
         <p class="mt-1 text-xs font-medium">Alfred Tuva &#x2022; 1 Feb 2023 </p>
         <div class="flex justify-between items-center">
@@ -13,8 +13,7 @@
 
         </div>
         <p class="mt-1 text-sm">
-            A look at the myths surrounding php and their validity in today's
-            industry
+            {{ $post->caption }}
         </p>
     </div>
 </a>
