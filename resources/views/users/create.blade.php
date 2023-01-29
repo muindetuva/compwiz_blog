@@ -16,14 +16,14 @@
     <div class="w-screen px-6 -mt-16 space-y-8 md:mt-0 md:px-2 max-w-md">
         <div class="p-8 space-y-4 bg-white/50 backdrop-blur-xl border border-gray-200 shadow-2xl rounded-2xl relative">
             <div class="flex justify-center w-full">
-                <div class="filament-brand text-xl font-bold tracking-tight">
+                <a href="/" class="filament-brand text-xl font-bold tracking-tight">
                     <span class="text-yellow-500">Compwiz</span>
                     <span class="text-green-500">Blog</span>
-                </div>
+                </a>
             </div>
 
             <h2 class="text-2xl font-bold tracking-tight text-center">
-                Login
+                Register
             </h2>
 
             <div>
@@ -132,6 +132,11 @@
                             class="inline-flex items-center justify-center py-1 gap-1 font-medium rounded-lg border transition-colors focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset min-h-[2.25rem] px-4 text-sm text-white shadow focus:ring-white border-transparent bg-yellow-500 hover:bg-yellow-500 focus:bg-yellow-400 focus:ring-offset-yellow-700 w-full">
                         Register
                     </button>
+
+
+                    <p class="text-center">
+                        Already Registerd? <a href="/admin/login" class="text-yellow-500">Login</a>
+                    </p>
 
                 </form>
 
