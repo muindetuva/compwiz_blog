@@ -38,7 +38,7 @@ cp -a .env.example .env
 php artisan key:generate
 ```
 
-- Set up your Database and connect it to the app.
+- Set up your Database and connect it to the app in the .env file
 
 ```
 You're free to use either mysql or sqlite. 
@@ -49,12 +49,6 @@ Just make sure you have the required dependencies for your choice.
 
 ```
 php artisan migrate --seed
-```
-
-- Link storage
-
-```
-php artisan storage:link
 ```
 
 - Serve the application
