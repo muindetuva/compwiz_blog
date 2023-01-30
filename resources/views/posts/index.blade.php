@@ -6,7 +6,7 @@
         <p class="text-center text-xs">Latest tech trends, our opinions and our thoughts.</p>
     </div>
 
-    <div class="flex flex-col">
+    <div class="flex flex-col lg:flex-row flex-wrap">
         @foreach($posts as $post)
             <x-post
                 :post="$post"
