@@ -17,7 +17,7 @@
         Posts
     </a>
     @auth
-        <a class="ml-auto text-white font-medium bg-yellow-500 rounded p-1 text-sm" href="/admin">Dashboard</a>
+        <a class="ml-auto text-white font-medium bg-yellow-500 rounded p-1 text-sm" href="/admin/posts">Dashboard</a>
     @endauth
 
     @guest
