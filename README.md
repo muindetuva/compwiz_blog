@@ -51,6 +51,12 @@ Just make sure you have the required dependencies for your choice.
 php artisan migrate --seed
 ```
 
+- Link Storage
+```
+php artisan storage:link
+```
+
+
 - Serve the application
 
 ```
