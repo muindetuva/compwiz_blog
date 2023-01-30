@@ -63,4 +63,12 @@ php artisan serve
 npm run dev
 ```
 
-- On your browser visit https://127.0.0.1:8000 to view the website
+- On your browser visit http://127.0.0.1:8000 to view the website
+
+### The Admin Dashboard
+
+- We already have 3 users in the database
+    - tuva@mail.com
+    - mithc@mail.com
+    - serem@mail.com
+- They all use the password `password`
