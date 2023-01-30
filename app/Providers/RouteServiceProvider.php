@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Filament\Http\Responses\Auth\Contracts\LoginResponse as LoginResponseContract;
 use Filament\Http\Responses\Auth\Contracts\LogoutResponse as LogoutResponseContract;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -40,6 +41,8 @@ class RouteServiceProvider extends ServiceProvider
 
         // Bind my own logout response
         $this->app->bind(LogoutResponseContract::class, \App\Http\Responses\LogoutResponse::class);
+        $this->app->bind(LoginResponseContract::class, \App\Http\Responses\LoginResponse::class);
+
     }
 
     /**
