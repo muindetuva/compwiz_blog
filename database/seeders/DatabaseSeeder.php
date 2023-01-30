@@ -38,15 +38,9 @@ class DatabaseSeeder extends Seeder
         // Create some posts
         Post::factory()
             ->create([
-                'title' => 'Best IDE ever!',
-                'image' => 'ide.jpg',
-                'user_id' => $mitch->id
-            ]);
-        Post::factory()
-            ->create([
-                'title' => "Tech meetups you shouldn't miss",
-                'image' => 'meetup.jpg',
-                'user_id' => $timothy->id
+                'title' => 'Is Php Really dead?',
+                'image' => 'is_php_dead.jpg',
+                'user_id' => $tuva->id
             ]);
         Post::factory()
             ->create([
@@ -62,9 +56,17 @@ class DatabaseSeeder extends Seeder
             ]);
         Post::factory()
             ->create([
-                'title' => 'Is Php Really dead?',
-                'image' => 'is_php_dead.jpg',
-                'user_id' => $tuva->id
+                'title' => 'Best IDE ever!',
+                'image' => 'ide.jpg',
+                'user_id' => $mitch->id
             ]);
+        Post::factory()
+            ->create([
+                'title' => "Tech meetups you shouldn't miss",
+                'image' => 'meetup.jpg',
+                'user_id' => $timothy->id
+            ]);
+
+
     }
 }
