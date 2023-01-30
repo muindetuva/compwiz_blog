@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Filament\Http\Responses\Auth\Contracts\LogoutResponse as LogoutResponseContract;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -36,6 +37,9 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
         });
+
+        // Bind my own logout response
+        $this->app->bind(LogoutResponseContract::class, \App\Http\Responses\LogoutResponse::class);
     }
 
     /**

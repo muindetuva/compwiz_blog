@@ -24,7 +24,7 @@ Route::get('/', function () {
             ->take(3)
             ->get()
     ]);
-});
+})->name('welcome');
 
 Route::get('/posts', function () {
 
