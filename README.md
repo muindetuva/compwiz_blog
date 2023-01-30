@@ -11,7 +11,7 @@
 - Clone the repo
 
 ```
-git clone git@github.com:muindetuva/powpap.git
+git clone git@github.com:muindetuva/compwiz_blog.git
 ```
 
 - Install all the php packages
